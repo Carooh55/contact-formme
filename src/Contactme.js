@@ -7,15 +7,13 @@ export default function Contactme() {
       <form>
         <div className="names">
           <div>
-            <div>
-              <label for="name">First Name * </label>
-            </div>
-            <input type="text" name="name" id="name" required />
-            <div>
-              <label for="name">Last Name * </label>
-            </div>
-            <input type="text" name="name" id="name" required />
+            <label for="name">First Name * </label>
           </div>
+          <input type="text" name="name" id="name" required />
+          <div>
+            <label for="name">Last Name * </label>
+          </div>
+          <input type="text" name="name" id="name" required />
         </div>
         <div className="details">
           <label for="name">Email Address * </label>
@@ -36,7 +34,7 @@ export default function Contactme() {
           <button></button>
           <label for="name"> I consent to being contacted by the team * </label>
         </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
