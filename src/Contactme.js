@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./Contactme.css";
+import "./Contactme.css"; // Ensure this file exists and has relevant styles
 
 const Contactme = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    queryType: "General Enguiry",
+    queryType: "General Enquiry", // Corrected typo here
     message: "",
     consent: false,
   });
@@ -25,7 +25,7 @@ const Contactme = () => {
   };
 
   return (
-    <form onsubmit={handleSubmit} style={{ maxWidth: "400px", margin: "auto" }}>
+    <form onSubmit={handleSubmit} style={{ maxWidth: "400px", margin: "auto" }}>
       <h2>Contact Us</h2>
 
       <div>
@@ -35,7 +35,7 @@ const Contactme = () => {
             type="text"
             name="firstName"
             value={formData.firstName}
-            onchange={handleChange}
+            onChange={handleChange}
             required
           />
         </label>
@@ -48,7 +48,7 @@ const Contactme = () => {
             type="text"
             name="lastName"
             value={formData.lastName}
-            onchange={handleChange}
+            onChange={handleChange}
             required
           />
         </label>
@@ -61,47 +61,45 @@ const Contactme = () => {
             type="email"
             name="email"
             value={formData.email}
-            onchange={handleChange}
+            onChange={handleChange}
             required
           />
         </label>
       </div>
 
       <div>
-        <label>
-          Query type *
-          <div>
-            <label>
-              <input
-                type="radio"
-                name="queryType"
-                values=" General Enquiry"
-                checked={formData.queryType === "General Enquiry"}
-                onchange={handleChange}
-              />
-              General Enquiry
-            </label>
-            <label>
-              <input
-                type="radio"
-                name="queryType"
-                value="Support Request"
-                checked={formData.queryType === "Support Request"}
-                onchange={handleChange}
-              />
-              Support Request
-            </label>
-          </div>
-        </label>
+        <label>Query Type *</label>
+        <div>
+          <label>
+            <input
+              type="radio"
+              name="queryType"
+              value="General Enquiry"
+              checked={formData.queryType === "General Enquiry"}
+              onChange={handleChange}
+            />
+            General Enquiry
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="queryType"
+              value="Support Request"
+              checked={formData.queryType === "Support Request"}
+              onChange={handleChange}
+            />
+            Support Request
+          </label>
+        </div>
       </div>
 
       <div>
         <label>
-          message
+          Message
           <textarea
             name="message"
             value={formData.message}
-            onchange={handleChange}
+            onChange={handleChange}
           />
         </label>
       </div>
@@ -112,7 +110,7 @@ const Contactme = () => {
             type="checkbox"
             name="consent"
             checked={formData.consent}
-            onchange={handleChange}
+            onChange={handleChange}
           />
           I consent to being contacted by the team
         </label>
