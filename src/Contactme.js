@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./Contactme.css"; // Ensure this file exists and has relevant styles
+import "./Contactme.css";
 
 const Contactme = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    queryType: "General Enquiry", // Corrected typo here
+    queryType: "General Enquiry",
     message: "",
     consent: false,
   });
@@ -95,7 +95,7 @@ const Contactme = () => {
 
       <div>
         <label>
-          Message
+          Message *
           <textarea
             name="message"
             value={formData.message}
@@ -112,7 +112,7 @@ const Contactme = () => {
             checked={formData.consent}
             onChange={handleChange}
           />
-          I consent to being contacted by the team
+          I consent to being contacted by the team *
         </label>
       </div>
 
