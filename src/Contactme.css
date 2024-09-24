@@ -75,15 +75,26 @@ label[for="consent"] {
   align-items: center;
 }
 
-input[type="radio"] + label {
-  display: inline-block;
-  margin-right: 20px;
-}
-
 div > label {
   margin-bottom: 5px;
 }
 
 div > div {
   margin-top: 5px;
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border-color: #ccc;
+}
+
+.types {
+  display: flex;
+  justify-content: space-between;
 }

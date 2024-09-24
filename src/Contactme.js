@@ -28,33 +28,31 @@ const Contactme = () => {
     <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "auto" }}>
       <h2>Contact Us</h2>
 
-      <div className="container">
-        <div className="row">
-          <div className="col-6">
-            <label>
-              First Name *
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                required
-              />
-            </label>
-          </div>
+      <div className="names">
+        <div>
+          <label>
+            First Name *
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
 
-          <div className="col-6">
-            <label>
-              Last Name *
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                required
-              />
-            </label>
-          </div>
+        <div>
+          <label>
+            Last Name *
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </label>
         </div>
       </div>
 
@@ -73,32 +71,30 @@ const Contactme = () => {
 
       <div>
         <label>Query Type *</label>
-        <div>
-          <button>
-            <label>
+        <div className="types">
+          <label>
+            <button className="button">
               <input
                 type="radio"
                 name="queryType"
                 value="General Enquiry"
-                checked={formData.queryType === "General Enquiry"}
                 onChange={handleChange}
               />
               General Enquiry
-            </label>
-          </button>
+            </button>
+          </label>
 
-          <button>
-            <label>
+          <label>
+            <button className="button">
               <input
                 type="radio"
                 name="queryType"
                 value="Support Request"
-                checked={formData.queryType === "Support Request"}
                 onChange={handleChange}
               />
               Support Request
-            </label>
-          </button>
+            </button>
+          </label>
         </div>
       </div>
 
