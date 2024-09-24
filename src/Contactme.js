@@ -25,33 +25,37 @@ const Contactme = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: "400px", margin: "auto" }}>
+    <form onSubmit={handleSubmit} style={{ maxWidth: "600px", margin: "auto" }}>
       <h2>Contact Us</h2>
 
-      <div>
-        <label>
-          First Name *
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-        </label>
-      </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-6">
+            <label>
+              First Name *
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
 
-      <div>
-        <label>
-          Last Name *
-          <input
-            type="text"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
-        </label>
+          <div className="col-6">
+            <label>
+              Last Name *
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+        </div>
       </div>
 
       <div>
@@ -70,26 +74,31 @@ const Contactme = () => {
       <div>
         <label>Query Type *</label>
         <div>
-          <label>
-            <input
-              type="radio"
-              name="queryType"
-              value="General Enquiry"
-              checked={formData.queryType === "General Enquiry"}
-              onChange={handleChange}
-            />
-            General Enquiry
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="queryType"
-              value="Support Request"
-              checked={formData.queryType === "Support Request"}
-              onChange={handleChange}
-            />
-            Support Request
-          </label>
+          <button>
+            <label>
+              <input
+                type="radio"
+                name="queryType"
+                value="General Enquiry"
+                checked={formData.queryType === "General Enquiry"}
+                onChange={handleChange}
+              />
+              General Enquiry
+            </label>
+          </button>
+
+          <button>
+            <label>
+              <input
+                type="radio"
+                name="queryType"
+                value="Support Request"
+                checked={formData.queryType === "Support Request"}
+                onChange={handleChange}
+              />
+              Support Request
+            </label>
+          </button>
         </div>
       </div>
 
@@ -117,7 +126,9 @@ const Contactme = () => {
       </div>
 
       <div>
-        <button type="submit">Submit</button>
+        <button className="submitbutton" type="submit">
+          Submit
+        </button>
       </div>
     </form>
   );
