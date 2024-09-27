@@ -9,9 +9,9 @@ form {
 
 h2 {
   text-align: left;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #3f3d3d;
   font-weight: bold;
 }
 
@@ -27,7 +27,8 @@ input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 5px;
+  padding: 8px;
+  padding-right: 0;
   margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -46,6 +47,7 @@ input[type="radio"] {
 
 div {
   margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 .submitbutton {
@@ -80,7 +82,7 @@ div > label {
 }
 
 div > div {
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .names {
@@ -91,7 +93,11 @@ div > div {
 .button {
   background-color: #ffffff;
   border-radius: 4px;
-  border-color: #ccc;
+  border: 1px solid #ccc;
+  padding: 7px;
+  text-align: left;
+  padding-right: 164px;
+  padding-bottom: 8px;
 }
 
 .types {
